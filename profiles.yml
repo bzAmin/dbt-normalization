@@ -1,0 +1,84 @@
+config:
+  partial_parse: true
+  printer_width: 120
+  send_anonymous_usage_stats: false
+  use_colors: true
+normalize:
+  outputs:
+    prod:
+      dataset: test_normalization
+      keyfile_json:
+        auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+        auth_uri: https://accounts.google.com/o/oauth2/auth
+        client_email: demo-727@owkin-dev-dashboard.iam.gserviceaccount.com
+        client_id: '113078062429244690467'
+        client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/demo-727%40owkin-dev-dashboard.iam.gserviceaccount.com
+        private_key: '-----BEGIN PRIVATE KEY-----
+
+          MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC944PS6P8QgutY
+
+          nu0D+WjPHfbcblsNFqKfsraH9jNpCI4TusqFq1iKnibef3MwQf1qxeloYdQSU2cr
+
+          rIBW2de+aUbLWdIfGSKaPKzQfFiXU0CB1RZ5/uI7q1RRdQrx01cEXnMvZuvVGkIw
+
+          boB4r9GwfNJtReQRySnDwF0dtKzdrZyePDb+dfSYN+y21Ymu5+U7o+cIrfPR4QZ+
+
+          HQGCZigtpQLRQ61KUy0jJhLc5oBsMoR3extg0NQJIfU29Rw8CJpF8XH4P/eD8D82
+
+          +5Gqb26DF2OGHyMRcZTtdtim9OWJ3RN+wF3zwMxQFgB0mp6Cg28/OG31uNzNxnJP
+
+          mHUTEkF7AgMBAAECggEAEXmwwLuZ+Fu0Flx56kBieZKDt4Gdy4nmaYAO9bBIxu/M
+
+          njA17IX6XgzJUvdeaHXflptO1xZkZ/4DpAH6GwQYAM67fyzC/lhX1jijRtn1ZT0k
+
+          1firBYsu0thPqDd3TGNrbLGB3ujqkfAatfkAGxtDLFTbIMdVLUswFsh19AKUA3U1
+
+          LKjYG2ULQLq2qYzrAqRTNC45+yQrrws6J0ECXfRiM4HtwvR1psJlol8/WAMq0lHM
+
+          jcF5ertj9ZGCrQOXc7//71Gy00zYx9llBM7HuDy99s3NJRriz2J1LGzwE56JCn9p
+
+          nvXLk0lGoKHySSCAmgujaHtU09nFP7cfSrIFuMpTwQKBgQD9c83VsZ4TIaE+1jnU
+
+          ZTbVAlaEPbu9T3KJh1LvpWesP2rwFyEP/JB79SEdv1r4+y+Bbzq7qdoguOu+EMzU
+
+          uGH5DjaQTQZQJfILDsrHQ8zWL6mbj83GYrTxJ7OZpXCWRMy8Pb0t77WNtJfxNeG3
+
+          wV4CFJeuxxtu1ufh4Z6tkFDi8QKBgQC/zCVXlZLPMXYUNxnGOlrSWImmpY9PMHId
+
+          qzAYalxWae8z8CwnK4T9GGt9BwcJdUlZPifJykgb4qto7c6sG8wNJE5F0zGrsf+U
+
+          7EuJcfZmtnomH5Kz4aU29m2gmxXPuJuyaPa+GqUnYTSIu9EUCMFASGvVQonqLiU0
+
+          3opqCmhTKwKBgQD9MHtWV1o/aGAJQr6AhB/TiMNe1cC/bCdSZgIe7pBzjOLKN4DK
+
+          1JaNjiJn8inyAhPB7Jiysgn6mGC//U5xzkPpJh6x5pBA7rct/rfpebyd1v1LLsv0
+
+          u9Rf+DY9bfzb0JzqC4753bXzeo4y4426IIxF7cZdTgAEqOD6UIZQgpObMQKBgE1a
+
+          yLTKXquyBy2gC4Ung/nSO7I6k9Icd+n/YSZ3v0Ya856+/w/NPZXWg4Opkez+oNad
+
+          eu6n5u1YPknTn8dKbsHeIrOGukHFSI+Hve9xRy+l6R33HfPuzfOc8BoWcnWUvzb1
+
+          no6NsI5xZf6/wVOTNF3414TrkTQh6F+qYajjCbCBAoGBAIhzTawtkR3929StK6ej
+
+          CpyrVg9FZ4FxNhaM8lhpegxSyHPJjYTbvY5xnm+wyjhNAWSZxtGNax2Ay9E4rpuj
+
+          4GHkGW6Qx1KLd8Ge6JhTAyJl/GK8MHtxr1F7sLf65A3V25IcGpRjyfRsNx2F2vFW
+
+          L7xYqax3k9rlWv7hB1Uh07wH
+
+          -----END PRIVATE KEY-----
+
+          '
+        private_key_id: 7d12907999ce5e3afe02c41a39f58c9bdfe70ed8
+        project_id: owkin-dev-dashboard
+        token_uri: https://oauth2.googleapis.com/token
+        type: service_account
+      location: europe-west1
+      method: service-account-json
+      priority: interactive
+      project: owkin-dev-dashboard
+      retries: 1
+      threads: 32
+      type: bigquery
+  target: prod
