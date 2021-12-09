@@ -1,61 +1,38 @@
-# This file is necessary to install dbt-utils with dbt deps
-# the content will be overwritten by the transform function
 
-# Name your package! Package names should contain only lowercase characters
+# Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'airbyte_utils'
-version: '1.0'
+name: 'tech_kpi_dashboard'
+version: '1.0.0'
 config-version: 2
 
-# This setting configures which "profile" dbt uses for this project. Profiles contain
-# database connection information, and should be configured in the  ~/.dbt/profiles.yml file
-profile: 'normalize'
+# This setting configures which "profile" dbt uses for this project.
+profile: 'tech_kpi_dashboard'
 
 # These configurations specify where dbt should look for different types of files.
-# The `source-paths` config, for example, states that source models can be found
-# in the "models/" directory. You probably won't need to change these!
+# The `source-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
 source-paths: ["models"]
-docs-paths: ["docs"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
 macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
 
-target-path: "../build"  # directory which will store compiled SQL files
-log-path: "../logs"  # directory which will store DBT logs
-modules-path: "/tmp/dbt_modules"  # directory which will store external DBT dependencies
-
+target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
-    - "build"
-    - "dbt_modules"
+  - "target"
+  - "dbt_modules"
 
-quoting:
-  database: true
-# Temporarily disabling the behavior of the ExtendedNameTransformer on table/schema names, see (issue #1785)
-# all schemas should be unquoted
-  schema: false
-  identifier: true
 
-# You can define configurations for models in the `source-paths` directory here.
-# Using these configurations, you can enable or disable models, change how they
-# are materialized, and more!
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+# In this example config, we tell dbt to build all models in the example/ directory
+# as tables. These settings can be overridden in the individual model files
+# using the `{{ config(...) }}` macro.
 models:
-  airbyte_utils:
-    +materialized: table
-    generated:
-      airbyte_ctes:
-        +tags: airbyte_internal_cte
-        +materialized: ephemeral
-      airbyte_incremental:
-        +tags: incremental_tables
-        +materialized: incremental
-        +on_schema_change: sync_all_columns
-      airbyte_tables:
-        +tags: normalized_tables
-        +materialized: table
-      airbyte_views:
-        +tags: airbyte_internal_views
-        +materialized: view
-
-
+  tech_kpi_dashboard:
+    # Config indicated by + and applies to all files under models/example/
+    example:
+      +materialized: view
