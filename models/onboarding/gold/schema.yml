@@ -1,0 +1,7 @@
+
+version: 2
+
+models:
+  - name: onboarding_dev
+    description: "dbt model onboarding gold dataset"
+
