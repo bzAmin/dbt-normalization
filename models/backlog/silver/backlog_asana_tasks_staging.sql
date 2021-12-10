@@ -17,7 +17,8 @@ with source_data as (
         JSON_EXTRACT_SCALAR(memberships[OFFSET(0)],'$.section.gid') as section,
         modified_at,
         completed_at,
-        approval_status
+        approval_status,
+        _airbyte_backlog_asana_tasks_hashid
         
         
     from {{ source ('internal_tech_kpi_bronze','backlog_asana_tasks')}}
