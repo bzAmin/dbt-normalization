@@ -1,0 +1,7 @@
+
+version: 2
+
+models:
+  - name: testsuite_workflow_runs_staging
+    description: "dbt model onboarding gold dataset"
+

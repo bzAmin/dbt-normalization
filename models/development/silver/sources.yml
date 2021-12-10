@@ -1,0 +1,10 @@
+version: 2
+sources:
+- name: internal_tech_kpi_bronze
+  quoting:
+    database: true
+    schema: false
+    identifier: false
+  tables:
+  - name: _airbyte_raw_testsuite_githubaction_workflow_runs
+  - name: pull_requests
