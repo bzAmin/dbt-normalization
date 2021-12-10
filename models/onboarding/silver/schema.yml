@@ -2,6 +2,6 @@
 version: 2
 
 models:
-  - name: onboarding_gsheet_onboarding_dev_setup
+  - name: onboarding_gsheet_onboarding_dev_setup_staging
     description: "dbt model onboarding silver dataset"
 

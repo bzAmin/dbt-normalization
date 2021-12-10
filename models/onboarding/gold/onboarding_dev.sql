@@ -6,7 +6,7 @@ with source_data as (
 
     select         
         *        
-    from {{ref('onboarding_gsheet_onboarding_dev_setup')}}
+    from {{ref('onboarding_gsheet_onboarding_dev_setup_staging')}}
 )
 
 select *

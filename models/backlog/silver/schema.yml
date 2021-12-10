@@ -1,0 +1,7 @@
+
+version: 2
+
+models:
+  - name: backlog_asana_tasks_staging
+    description: "dbt model backlog tasks silver dataset"
+

@@ -1,0 +1,12 @@
+version: 2
+sources:
+- name: internal_tech_kpi_bronze
+  quoting:
+    database: true
+    schema: false
+    identifier: false
+  tables:
+  - name: backlog_asana_tasks
+  - name: backlog_asana_projects
+  - name: backlog_asana_sections
+  - name: backlog_asana_teams
